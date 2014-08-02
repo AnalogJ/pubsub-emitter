@@ -162,8 +162,6 @@ module.exports = function(sails) {
          */
 
         sails.sockets.broadcast = function(roomName, eventName, data, socketToOmit) {
-            console.log("BROADCAST", arguments)
-
             // If the 'eventName' is an object, assume the argument was omitted and
             // parse it as data instead.
             if (typeof eventName === 'object') {
