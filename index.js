@@ -50,9 +50,9 @@ module.exports = function(sails) {
             sails.io.sockets = require('./lib/emitter')({
                 host: sails.config.sockets.host,
                 port: sails.config.sockets.port,
+                pass: sails.config.sockets.pass,
                 key: 'dispatch'
             });
-
             // Add low-level, generic socket methods.  These are mostly just wrappers
 
             // around socket.io, to enforce a little abstraction.
